@@ -1,0 +1,654 @@
+body {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+}
+body.lock {
+    overflow: hidden;
+}
+p {    
+    margin: 0;   
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+}
+.module.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+}
+.error-message {
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 30px;
+    margin: 3px 18px;
+    color: brown;
+}
+
+/* HOMEPAGE */
+
+.homepage__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 28px 70px;
+}
+
+.homepage p { 
+    font-family: 'Dongle';
+    font-size: 30px;
+    line-height: 25px;
+}
+
+.homepage h1 { 
+    font-family: 'Poiret One';
+    font-size: 56px;
+    margin: -10px 0 10px 0;
+    padding: 0;
+}
+
+.homepage h3 { 
+    font-family: 'Dongle';
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0 0 40px 0;
+    line-height: 31px;
+    padding: 0;
+}
+
+.homepage button {
+    margin-top: 58px;
+    font-family: 'Dongle';
+    font-weight: 500;
+    font-size: 32px;
+    padding: 8px 34px;    
+    border-radius: 10px;
+    border: none;
+    background-color: #2f6261;
+    transition: 3ms;
+    color: #dfeae0;
+    width: fit-content;
+}
+
+.homepage button:hover {
+    background-color: #214949;
+    cursor: pointer;
+}
+
+.homepage button:active {
+    background-color: #2f6261;
+}
+
+.homepage__container {
+    margin: 6vw auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -100%);
+    transition: 0.4s ease-in-out;
+}
+
+.homepage__container-img { 
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage__container a { 
+    width: fit-content;
+}
+
+.homepage__container-img p {
+    margin: 0 40px 0 10px;
+    font-size: 25px;
+}
+
+.homepage__container img { 
+    width: 50px;
+    height: 50px;
+    margin: 10px 50px 0 0;
+}
+
+
+/* LOGIN / REGISTER */
+
+.auth {
+    width: 70vw;
+    margin: -26.5vw 7vw;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -100%);
+    transition: 0.4s ease-in-out;
+}
+
+.auth__container {
+    width: 460px;
+    background-color: #dfeae0;
+    margin-right: 80px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.auth__container h2 {
+    font-family: 'Poiret One';
+    font-weight: 700;
+    font-size: 48px;
+    margin: 30px 0 40px 0;
+}
+
+.auth__container input {
+    font-family: 'Dongle';
+    font-size: 38px;
+    margin: 12px 60px;
+    padding: 0 20px;
+    width: 300px;
+}
+
+.auth__container button {
+    font-family: 'Dongle';
+    font-size: 40px;
+    margin: 20px 150px;
+    padding: 0 20px;
+    background-color: #2f6261;
+    border-radius: 10px;
+    border: none;
+    color: #dfeae0;
+}
+
+.auth__container button:hover {
+    background-color: #214949;
+}
+
+.auth__container button:active {
+    background-color: #2f6261;
+}
+
+/* PERSONAL ACCOUNT */
+
+.account {
+    display: block;
+    width: 68vw;
+    height: 37vw;
+    overflow-y: auto;
+    margin-left: 90px;
+    margin-top: -32.5vw;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -100%);
+    transition: 0.5s ease-out;
+}
+
+.account hr {
+    width: 56vw;
+    border: 1.81px solid #214949;
+    border-radius: 2px;
+}
+
+.account__container hr {
+    width: auto;
+    margin: 12px 0;
+}
+
+.account h2 {
+    font-family: 'Poiret One';
+    font-size: 50px;
+    margin: 0 24px 8px 170px;
+}
+
+.account h3 {
+    font-family: 'Dongle';
+    font-weight: normal;
+    font-size: 38px;
+    margin: 0px 0 -10px 150px;
+}
+
+.account button {
+    background-image: url("../images/edit-profile.png");
+    background-color: #FFFFFF; 
+    background-size: 100%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+
+.account button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.account__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ 
+.account__container {
+    background-color: #dfeae0;
+    margin: 10px 22px;
+    padding: 22px;
+    width: fit-content;
+    display: inline-block;
+    border-radius: 28px;
+    transition: 0.35s ease-out;
+    vertical-align: top;
+}
+
+.account__container:hover {
+    transform: scale(1.02);
+}
+
+.account img {
+    width: 70px;
+    height: 70px;
+    margin-top: 25px;
+    vertical-align: top;
+}
+
+.account__container h4 {    
+    font-family: 'Dongle';
+    font-weight: 500;
+    font-size: 48px;
+    margin: 8px 0;
+    line-height: 34px;
+}
+
+.account__container h5 {
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 40px;
+    margin: 6px 0;
+    line-height: 32px;
+}
+
+.account__container li {
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 32px;
+}
+
+.account__container ul {
+    margin: 0;
+}
+
+.account__container li::marker {
+    font-size: 30px;
+}
+
+.account__container-header {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+/* EDIT */
+
+.edit {
+    display: flex;  
+    overflow: auto;
+    height: 35vw;
+}
+
+.edit__container {
+    background-color: #dfeae0;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 64px 20px 64px;
+    border-radius: 20px;
+    transform: translate(0px, -100%);
+    transition: 0.35s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.edit h2 {
+    font-family: 'Poiret One';
+    font-size: 40px;
+    margin: 10px 0 40px 50px;
+}
+
+.edit h3 {
+    font-family: 'Poiret One';
+    font-size: 36px;
+    margin: 20px 0 20px 50px;
+}
+
+.edit__container-input {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    width: 28vw;
+}
+
+.edit__container-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 28px 0 20px 0;    
+}
+
+.edit button {
+    margin: 0 20px 0 0;
+    font-family: 'Dongle';
+    font-weight: 400;
+    font-size: 32px;
+    padding: 0 20px;
+    line-height: 40px;    
+    border: none;
+    border-radius: 10px;
+    background-color: #2f6261;
+    color: #dfeae0;
+
+}
+
+.edit button:hover {
+    background-color: #214949;
+    cursor: pointer;
+}
+
+.edit button::after {
+    background-color: #2f6261;
+}
+
+.edit input {
+    width: 100%;
+    font-family: 'Dongle';
+    font-weight: 400;
+    font-size: 32px;
+    margin: 6px 10px 0 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.edit label {
+    width: fit-content;
+    white-space: nowrap;
+    font-family: 'Dongle';
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 10px 0 0;
+    /* line-height: 32px; */
+}   
+
+.entries-preview h4 {
+    width: fit-content;
+    font-family: 'Dongle';
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 10px 0 0;
+    line-height: 28px;
+}
+
+.entries-preview li {
+    width: fit-content;
+    font-family: 'Dongle';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 28px;
+}
+
+.entries-preview li::marker {
+    font-size: 26px;
+}
+
+.medical-entry-form select {
+    width: fit-content;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 34px;
+    padding: 6px 40px 6px 12px;
+    margin:  0 0 10px 0;
+    cursor: pointer;
+    line-height: 34px;
+    appearance: none;
+    background-image: url("../images/down2.png"); 
+    background-repeat: no-repeat, repeat;
+    background-position: right 10px top 50%, 0 0;
+    background-size: .50em auto, 100%; 
+}
+
+.medical-entry-form input {
+    display: flex;
+    margin: 10px 0;
+}
+
+.medical-entry-form button {
+    width: fit-content;
+    padding: 3px 28px;
+    margin: 10px 30px;
+}
+
+.qr-modal h3 {
+    margin: 0;
+}
+
+/* BOOKING */
+
+.booking {
+    background-color: #dfeae0;
+    margin-top: -34vw;
+    margin-left: 11vw;
+    width: fit-content;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -100%);
+    transition: 0.5s ease-out;
+    padding: 20px 60px;
+    border-radius: 18px;
+}
+
+.booking h2 {
+    font-family: 'Poiret One';
+    font-weight: 700;
+    font-size: 38px;
+    margin: 18px 40px 30px 40px;
+}
+
+.booking__select-wrapper {
+    margin: 14px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.booking label {    
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 34px;
+    width: fit-content;
+    white-space: nowrap;
+    margin: 3px 18px 0 18px;
+}
+
+.booking select {
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 38px;
+    padding: 0px 40px 0 10px;
+    cursor: pointer;
+    line-height: 44px;
+    appearance: none;
+    background-image: url("../images/down2.png"); 
+    background-repeat: no-repeat, repeat;
+    background-position: right 10px top 50%, 0 0;
+    background-size: .50em auto, 100%; 
+}
+
+.booking input {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Dongle';
+    font-weight: 300;
+    font-size: 38px;
+    padding: 0px 0 0 10px;
+    line-height: 42px;
+    background-repeat: no-repeat, repeat;
+    background-position: right 10px top 40%, 0 0;
+    background-size: .80em auto, 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+.booking button {  
+    display: block;
+    margin: 38px auto 8px auto;
+    background-color: #2f6261;
+    padding: 4px 30px;    
+    border-radius: 10px;
+    border: none;
+    font-family: 'Dongle';
+    font-weight: 500;
+    font-size: 32px;
+    transition: 3ms;
+    color: #dfeae0;
+}
+
+.booking button:hover {
+    background-color: #214949;
+    cursor: pointer;
+}
+
+.booking button:active {
+    background-color: #2f6261;
+}
+
+/* EMERGENCY CALL */
+
+.emergency {
+    width: fit-content;
+    display: flex;
+    margin: -31vw 0 0 3vw;
+    padding: 30px 60px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -100%);
+    transition: 0.5s ease-out;
+}
+
+.emergency__container {
+    margin-right: 20px;
+}
+
+.emergency__container-panel {
+    margin-top: 21.65vw;
+}
+
+.emergency__header {
+    display: flex;
+}
+
+.emergency__header img {
+    width: 60px;
+    height: 60px;
+    margin-right: 4px;
+}
+
+.emergency h2 {
+    font-family: 'Poiret One';
+    font-weight: 800;
+    font-size: 38px;
+    margin: 10px 30px 30px 10px;
+    white-space: nowrap;
+}
+
+.emergency input {
+    font-family: 'Dongle';
+    font-weight: 500;
+    font-size: 34px;
+    padding-left: 10px;
+    margin: 0 20px 0 0;
+}
+
+.emergency button {
+    background-color: #dfeae0;
+    padding: 4px 30px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Dongle';
+    font-weight: 500;
+    font-size: 34px;
+    transition: 3ms;
+    width: fit-content;
+}
+
+.emergency button:hover {
+    background-color: #c0cfc1;
+    cursor: pointer;
+}
+
+.emergency button:active {
+    background-color: #dfeae0;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 1060px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Dongle';
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute; 
+    top: 41.5vw;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__container img {
+    width: 28px;
+    height: 28px;
+    transform: translate(0px, 100%);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer__container:hover img{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+}

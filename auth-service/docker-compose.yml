@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    container_name: auth-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://users_container:5432/${POSTGRES_AUTH_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_AUTH_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_AUTH_PASSWORD}
+      CORS_ALLOWED-ORIGINS: http://localhost:3000,http://localhost:3001
+      SECRET_KEY: ${SECRET}
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - users_container
+    restart: unless-stopped
+
+  users_container:
+    image: postgres
+    container_name: users_container
+    environment:
+      POSTGRES_USER: ${POSTGRES_AUTH_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_AUTH_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_AUTH_DB}
+    ports:
+      - "5777:5432"
+    volumes:
+      - users_volume:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "6777:8080"
+    depends_on:
+      - users_container
+    restart: unless-stopped
+
+volumes:
+  users_volume:
